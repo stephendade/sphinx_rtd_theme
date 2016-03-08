@@ -81,6 +81,45 @@
 
 <body class="wy-body-for-nav" role="document">
 
+    {# Static site menu. #}
+    <div id='cssmenu'>
+        <ul>
+           <li><a href='http://ardupilot.com/'>Home</a>
+              <ul>
+                 <li><a href='#'>Copter</a></li>
+                 <li>:ref:`test <configuration>`</li>
+                 <li><a href='#'>Plane</a></li>
+                 <li><a href='#'>Rover</a></li>
+                 <li><a href='#'>Mission Planner</a></li>
+                 <li><a href='#'>APM Planner 2</a></li>
+                 <li><a href='#'>AntennaTracker</a></li>
+                 <li><a href='#'>Dev</a></li>
+              </ul>
+           </li>
+           
+           
+           
+           <li><a href='#'>Downloads</a>
+              <ul>
+                 <li><a href='#'>Product 1</a>
+                    <ul>
+                       <li><a href='#'>Sub Product</a></li>
+                       <li><a href='#'>Sub Product</a></li>
+                    </ul>
+                 </li>
+                 <li><a href='#'>Product 2</a>
+                    <ul>
+                       <li><a href='#'>Sub Product</a></li>
+                       <li><a href='#'>Sub Product</a></li>
+                    </ul>
+                 </li>
+              </ul>
+           </li>
+           <li><a href='#'>About</a></li>
+           <li><a href='#'>Contact</a></li>
+        </ul>
+</div>
+
   <div class="wy-grid-for-nav">
 
     {# SIDE NAV, TOGGLES ON MOBILE #}
@@ -178,6 +217,7 @@
   {# RTD hosts this file, so just load on non RTD builds #}
   {% if not READTHEDOCS %}
     <script type="text/javascript" src="{{ pathto('_static/js/theme.js', 1) }}"></script>
+    <script type="text/javascript" src="{{ pathto('_static/js/menubar.js', 1) }}"></script>
   {% endif %}
 
   {# STICKY NAVIGATION #}
