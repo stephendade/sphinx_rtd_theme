@@ -179,6 +179,10 @@ html_show_sourcelink = True
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'SphinxRTDthemedemodoc'
 
+# In theory we should be able to alter this value using -A flag but that doesn't appear to work :-(
+#html_context= {'target':'dropbox'}
+html_context= {'target':'local'}
+#html_context= {'target':'someurl'}
 
 # -- Options for LaTeX output --------------------------------------------------
 

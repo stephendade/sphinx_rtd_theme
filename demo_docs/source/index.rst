@@ -30,6 +30,14 @@ Contents:
 
     long
     api
+    
+.. toctree::
+    :maxdepth: 2
+    :caption: Extras
+
+    common-table-of-contents
+    
+    
 
 Maaaaath!
 =========

@@ -7,6 +7,14 @@
   {%- set titlesuffix = "" %}
 {%- endif %}
 
+{%- if target == 'local' | lower %}
+    {% set target = '../..' %}
+{% elif target == 'dropbox' | lower %}
+    {% set target = 'https://dl.dropboxusercontent.com/u/3067678/share2/wiki' %}
+{%- else %}
+    {% set target = '../..' %}
+{%- endif %}
+
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
@@ -79,44 +87,74 @@
 
 </head>
 
+
+
 <body class="wy-body-for-nav" role="document">
 
     {# Static site menu. #}
     <div id='cssmenu'>
         <ul>
-           <li><a href='http://ardupilot.com/'>Home</a>
+           <li><a href='{{target}}/ardupilot/build/html/index.html'>Home</a>
               <ul>
-                 <li><a href='#'>Copter</a></li>
-                 <li>:ref:`test <configuration>`</li>
-                 <li><a href='#'>Plane</a></li>
-                 <li><a href='#'>Rover</a></li>
-                 <li><a href='#'>Mission Planner</a></li>
-                 <li><a href='#'>APM Planner 2</a></li>
-                 <li><a href='#'>AntennaTracker</a></li>
-                 <li><a href='#'>Dev</a></li>
+                 <li><a href='{{target}}/copter/build/html/index.html'>Copter</a></li>
+                 <li><a href='{{target}}/plane/build/html/index.html'>Plane</a></li>
+                 <li><a href='{{target}}/rover/build/html/index.html'>Rover</a></li>
+                 <li><a href='{{target}}/planner/build/html/index.html'>Mission Planner</a></li>
+                 <li><a href='{{target}}/planner2/build/html/index.html'>APM Planner 2</a></li>
+                 <li><a href='{{target}}/antennatracker/build/html/index.html'>AntennaTracker</a></li>
+                 <li><a href='{{target}}/dev/build/html/index.html'>Dev</a></li>
               </ul>
            </li>
            
            
-           
-           <li><a href='#'>Downloads</a>
+           <li><a href='#'>Downloads TBD</a>
               <ul>
-                 <li><a href='#'>Product 1</a>
-                    <ul>
-                       <li><a href='#'>Sub Product</a></li>
-                       <li><a href='#'>Sub Product</a></li>
-                    </ul>
-                 </li>
-                 <li><a href='#'>Product 2</a>
-                    <ul>
-                       <li><a href='#'>Sub Product</a></li>
-                       <li><a href='#'>Sub Product</a></li>
-                    </ul>
-                 </li>
+                <li><a href='#'>Mission Planner TBD</a></li>
+                <li><a href='#'>APM Planner 2 TBD</a></li>
+                <li><a href='#'>User Tools TBD</a></li> 
+                 <li><a href='#'>Dev Tools TBD</a></li>
+                 <li><a href='#'>Tutorial PDFs TBD</a></li>
               </ul>
            </li>
-           <li><a href='#'>About</a></li>
-           <li><a href='#'>Contact</a></li>
+           
+           <li><a href='http://diydrones.com' />Community</a>
+              <ul>
+                 <li><a href='http://diydrones.com/'>DIY Drones</a></li>
+                 <li><a href='http://ardupilot.com/forum/'>APM Forums</a></li>
+                 <li><a href='{{target}}/dev/build/html/index.html'>Developer</a></li>
+                 {%- if hasdoc('common-commercial-support') %}
+                   <li><a title="{{ _('Commercial Support') }}" href="{{ pathto('common-commercial-support') }}">{{ _('Commercial Support') }}</a></li>
+                 {%- endif %}
+                 {%- if hasdoc('common-team') %}
+                   <li><a title="{{ _('Dev Team') }}" href="{{ pathto('common-team') }}">{{ _('Development Team') }}</a></li>
+                 {%- endif %}
+                 {%- if hasdoc('common-training-centers') %}
+                   <li><a title="{{ _('Training Centres') }}" href="{{ pathto('common-training-centers') }}">{{ _('UAS Training Centers') }}</a></li>
+                 {%- endif %}
+              </ul>
+           </li>
+           
+           
+           {# Display project news and/or history #}
+           {%- if hasdoc('project-news') and hasdoc('common-history-of_ardupilot') %}
+                        <li><a title="{{ _('News') }}" href="{{ pathto('project-news') }}">{{ _('News') }}</a>
+               <ul>
+                 <li><a title="{{ _('Project News') }}" href="{{ pathto('project-news') }}">{{ _('Project News') }}</a></li>
+                 <li><a title="{{ _('History of ArduPilot') }}" href="{{ pathto('common-history-of_ardupilot') }}">{{ _('History of ArduPilot') }}</a></li>
+               </ul>
+             </li>
+           {%- endif %}
+           {%- if hasdoc('common-history-of_ardupilot') and not hasdoc('project-news') %}
+             <li><a title="{{ _('History of ArduPilot') }}" href="{{ pathto('common-history-of_ardupilot') }}">{{ _('History') }}</a></li>
+           {%- endif %}
+           {%- if hasdoc('project-news') and not hasdoc('common-history-of_ardupilot') %}
+             <li><a title="{{ _('Project News') }}" href="{{ pathto('project-news') }}">{{ _('News') }}</a></li>
+           {%- endif %}
+           
+           {%- if hasdoc('common-stores') %}
+             <li><a title="{{ _('Stores') }}" href="{{ pathto('common-stores') }}">{{ _('Stores') }}</a></li>
+           {%- endif %}
+           
         </ul>
 </div>
 
@@ -186,6 +224,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             {% block body %}{% endblock %}
+            
+            {# Display FULL TOC in Table of contents #}
+             {% if pagename=='common-table-of-contents' %}
+               {% set toctree = toctree(maxdepth=4, collapse=theme_collapse_navigation, includehidden=True) %}
+                 {% if toctree %}
+                     {{ toctree }}
+                 {% endif %}
+            {% endif %}
            </div>
           </div>
           {% include "footer.html" %}
