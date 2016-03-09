@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """`sphinx_rtd_theme` lives on `Github`_.
 
-.. _github: https://www.github.com/snide/sphinx_rtd_theme
+.. _github: https://www.github.com/hamishwillee/sphinx_rtd_theme
 
 """
 from setuptools import setup
@@ -11,11 +11,11 @@ from sphinx_rtd_theme import __version__
 setup(
     name='sphinx_rtd_theme',
     version=__version__,
-    url='https://github.com/snide/sphinx_rtd_theme/',
+    url='https://github.com/hamishwillee/sphinx_rtd_theme/',
     license='MIT',
     author='Dave Snider',
     author_email='dave.snider@gmail.com',
-    description='ReadTheDocs.org theme for Sphinx, 2013 version.',
+    description='ReadTheDocs.org theme for Sphinx, updated from DaveSnider version to have a site toolbar version.',
     long_description=open('README.rst').read(),
     zip_safe=False,
     packages=['sphinx_rtd_theme'],
