@@ -227,7 +227,7 @@
             {% block body %}{% endblock %}
             
             {# Display FULL TOC in Table of contents #}
-             {% if pagename=='common-table-of-contents' %}
+             {% if pagename=='docs/common-table-of-contents' %}
                {% set toctree = toctree(maxdepth=4, collapse=theme_collapse_navigation, includehidden=True) %}
                  {% if toctree %}
                      {{ toctree }}
