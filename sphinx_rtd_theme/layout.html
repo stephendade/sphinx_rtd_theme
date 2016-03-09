@@ -106,6 +106,7 @@
               </ul>
            </li>
            
+          
            
            <li><a href='#'>Downloads TBD</a>
               <ul>
@@ -122,37 +123,37 @@
                  <li><a href='http://diydrones.com/'>DIY Drones</a></li>
                  <li><a href='http://ardupilot.com/forum/'>APM Forums</a></li>
                  <li><a href='{{target}}/dev/build/html/index.html'>Developer</a></li>
-                 {%- if hasdoc('common-commercial-support') %}
-                   <li><a title="{{ _('Commercial Support') }}" href="{{ pathto('common-commercial-support') }}">{{ _('Commercial Support') }}</a></li>
+                 {%- if hasdoc('docs/common-commercial-support') %}
+                   <li><a title="{{ _('Commercial Support') }}" href="{{ pathto('docs/common-commercial-support') }}">{{ _('Commercial Support') }}</a></li>
                  {%- endif %}
-                 {%- if hasdoc('common-team') %}
-                   <li><a title="{{ _('Dev Team') }}" href="{{ pathto('common-team') }}">{{ _('Development Team') }}</a></li>
+                 {%- if hasdoc('docs/common-team') %}
+                   <li><a title="{{ _('Dev Team') }}" href="{{ pathto('docs/common-team') }}">{{ _('Development Team') }}</a></li>
                  {%- endif %}
-                 {%- if hasdoc('common-training-centers') %}
-                   <li><a title="{{ _('Training Centres') }}" href="{{ pathto('common-training-centers') }}">{{ _('UAS Training Centers') }}</a></li>
+                 {%- if hasdoc('docs/common-training-centers') %}
+                   <li><a title="{{ _('Training Centers') }}" href="{{ pathto('docs/common-training-centers') }}">{{ _('UAS Training Centers') }}</a></li>
                  {%- endif %}
               </ul>
            </li>
            
            
            {# Display project news and/or history #}
-           {%- if hasdoc('project-news') and hasdoc('common-history-of_ardupilot') %}
-                        <li><a title="{{ _('News') }}" href="{{ pathto('project-news') }}">{{ _('News') }}</a>
+           {%- if hasdoc('docs/project-news') and hasdoc('docs/common-history-of_ardupilot') %}
+                        <li><a title="{{ _('News') }}" href="{{ pathto('docs/project-news') }}">{{ _('News') }}</a>
                <ul>
-                 <li><a title="{{ _('Project News') }}" href="{{ pathto('project-news') }}">{{ _('Project News') }}</a></li>
-                 <li><a title="{{ _('History of ArduPilot') }}" href="{{ pathto('common-history-of_ardupilot') }}">{{ _('History of ArduPilot') }}</a></li>
+                 <li><a title="{{ _('Project News') }}" href="{{ pathto('docs/project-news') }}">{{ _('Project News') }}</a></li>
+                 <li><a title="{{ _('History of ArduPilot') }}" href="{{ pathto('docs/common-history-of-ardupilot') }}">{{ _('History of ArduPilot') }}</a></li>
                </ul>
              </li>
            {%- endif %}
-           {%- if hasdoc('common-history-of_ardupilot') and not hasdoc('project-news') %}
-             <li><a title="{{ _('History of ArduPilot') }}" href="{{ pathto('common-history-of_ardupilot') }}">{{ _('History') }}</a></li>
+           {%- if hasdoc('docs/common-history-of_ardupilot') and not hasdoc('docs/project-news') %}
+             <li><a title="{{ _('History of ArduPilot') }}" href="{{ pathto('docs/common-history-of_ardupilot') }}">{{ _('History') }}</a></li>
            {%- endif %}
-           {%- if hasdoc('project-news') and not hasdoc('common-history-of_ardupilot') %}
-             <li><a title="{{ _('Project News') }}" href="{{ pathto('project-news') }}">{{ _('News') }}</a></li>
+           {%- if hasdoc('docs/project-news') and not hasdoc('docs/common-history-of_ardupilot') %}
+             <li><a title="{{ _('Project News') }}" href="{{ pathto('docs/project-news') }}">{{ _('News') }}</a></li>
            {%- endif %}
            
-           {%- if hasdoc('common-stores') %}
-             <li><a title="{{ _('Stores') }}" href="{{ pathto('common-stores') }}">{{ _('Stores') }}</a></li>
+           {%- if hasdoc('docs/common-stores') %}
+             <li><a title="{{ _('Stores') }}" href="{{ pathto('docs/common-stores') }}">{{ _('Stores') }}</a></li>
            {%- endif %}
            
         </ul>
