@@ -228,7 +228,7 @@
             
             {# Display FULL TOC in Table of contents #}
              {% if pagename=='docs/common-table-of-contents' %}
-               {% set toctree = toctree(maxdepth=4, collapse=False, includehidden=True,titles_only=True) %}
+               {% set toctree = toctree(maxdepth=4, collapse=False, includehidden=True) %}
                  {% if toctree %}
                      {{ toctree }}
                  {% endif %}

@@ -31,11 +31,7 @@ Contents:
     long
     api
     
-.. toctree::
-    :maxdepth: 2
-    :caption: Extras
 
-    docs/common-table-of-contents
     
     
 
