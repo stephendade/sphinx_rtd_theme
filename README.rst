@@ -13,6 +13,14 @@
 Read the Docs Sphinx Theme
 **************************
 
+This is a modification of the [snide/sphinx_rtd_theme](https://github.com/snide/sphinx_rtd_theme).
+It supports the addition of a top site bar above the main sphinx content. This site bar includes menu content
+that is populated based on the presence of certain files in the source tree at /docs/
+
+for example, if a file ``docs/project-news.rst`` is present in the tree a "News" menu will be displayed.
+
+
+
 .. contents:: 
 
 View a working demo_ over on readthedocs.org_.

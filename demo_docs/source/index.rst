@@ -35,7 +35,7 @@ Contents:
     :maxdepth: 2
     :caption: Extras
 
-    common-table-of-contents
+    docs/common-table-of-contents
     
     
 
