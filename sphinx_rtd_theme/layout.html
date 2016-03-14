@@ -7,11 +7,10 @@
   {%- set titlesuffix = "" %}
 {%- endif %}
 
+<!-- Path to wiki directories, without backslash -->
 {%- if target == 'local' | lower %}
     {% set target = '../..' %}
-{% elif target == 'dropbox' | lower %}
-    {% set target = 'https://dl.dropboxusercontent.com/u/3067678/share2/wiki' %}
-{%- else %}
+{% elif target == None %}
     {% set target = '../..' %}
 {%- endif %}
 
