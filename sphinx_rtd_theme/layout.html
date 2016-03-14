@@ -136,7 +136,7 @@
            
            
            {# Display project news and/or history #}
-           {%- if hasdoc('docs/project-news') and hasdoc('docs/common-history-of_ardupilot') %}
+           {%- if hasdoc('docs/project-news') and hasdoc('docs/common-history-of-ardupilot') %}
                         <li><a title="{{ _('News') }}" href="{{ pathto('docs/project-news') }}">{{ _('News') }}</a>
                <ul>
                  <li><a title="{{ _('Project News') }}" href="{{ pathto('docs/project-news') }}">{{ _('Project News') }}</a></li>
@@ -144,10 +144,10 @@
                </ul>
              </li>
            {%- endif %}
-           {%- if hasdoc('docs/common-history-of_ardupilot') and not hasdoc('docs/project-news') %}
-             <li><a title="{{ _('History of ArduPilot') }}" href="{{ pathto('docs/common-history-of_ardupilot') }}">{{ _('History') }}</a></li>
+           {%- if hasdoc('docs/common-history-of-ardupilot') and not hasdoc('docs/project-news') %}
+             <li><a title="{{ _('History of ArduPilot') }}" href="{{ pathto('docs/common-history-of-ardupilot') }}">{{ _('History') }}</a></li>
            {%- endif %}
-           {%- if hasdoc('docs/project-news') and not hasdoc('docs/common-history-of_ardupilot') %}
+           {%- if hasdoc('docs/project-news') and not hasdoc('docs/common-history-of-ardupilot') %}
              <li><a title="{{ _('Project News') }}" href="{{ pathto('docs/project-news') }}">{{ _('News') }}</a></li>
            {%- endif %}
            
