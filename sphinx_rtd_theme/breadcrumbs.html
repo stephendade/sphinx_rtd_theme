@@ -5,7 +5,16 @@
 {% else %}
 {% set suffix = source_suffix %}
 {% endif %}
-
+{% if not pagename=='index' %}
+ {% set display_github = True %}
+ {% set github_user = 'hamishwillee' %}
+ {% set github_repo = 'ardupilot_wiki' %}
+ {% set github_version = 'master' %}
+ {% set conf_py_path = '/'+shorttitle+'/source/' %}
+ {% if pagename | truncate(12, end='') == 'docs/common-' %} 
+   {% set conf_py_path = '/common/source/' %}
+ {% endif %}
+{% endif %}
 <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="{{ pathto(master_doc) }}">Docs</a> &raquo;</li>
@@ -14,7 +23,7 @@
       {% endfor %}
     <li>{{ title }}</li>
       <li class="wy-breadcrumbs-aside">
-        {% if pagename != "search" %}
+        {% if pagename != "search" %}        
           {% if display_github %}
             <a href="https://{{ github_host|default("github.com") }}/{{ github_user }}/{{ github_repo }}/blob/{{ github_version }}{{ conf_py_path }}{{ pagename }}{{ suffix }}" class="fa fa-github"> Edit on GitHub</a>
           {% elif display_bitbucket %}

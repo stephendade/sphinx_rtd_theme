@@ -20,7 +20,13 @@ if a file ``docs/project-news.rst`` is present in the tree a "News" menu will be
 
 It also will display a table of contents in any article named /docs/common-table-of-contents.rst
 
+The theme displays the "Edit on Github" link by default on non-index pages. This is VERY tied into the ardupilot_wiki
+source structure. It uses the value in "html_short_title" field in the conf.py
+to determine the path. The value must therefore be a path that matches where the source is on github - e.g. "copter", "rover", "ardupilot"
+If this is done, source files will correctly be linked in https://github.com/hamishwillee/ardupilot_wiki.
+For common files it will link to the original in the common folder.
 
+ 
 
 .. contents:: 
 

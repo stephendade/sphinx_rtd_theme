@@ -107,10 +107,10 @@
            
           
            
-           <li><a href='#'>Downloads TBD</a>
+           <li><a href='http://firmware.diydrones.com/'>Downloads</a>
               <ul>
-                <li><a href='#'>Mission Planner TBD</a></li>
-                <li><a href='#'>APM Planner 2 TBD</a></li>
+                <li><a href='http://firmware.diydrones.com/Tools/MissionPlanner/'>Mission Planner</a></li>
+                <li><a href='http://firmware.diydrones.com/Tools/APMPlanner/'>APM Planner 2</a></li>
                 <li><a href='#'>User Tools TBD</a></li> 
                  <li><a href='#'>Dev Tools TBD</a></li>
                  <li><a href='#'>Tutorial PDFs TBD</a></li>
@@ -133,7 +133,10 @@
                  {%- endif %}
               </ul>
            </li>
-           
+
+           {%- if hasdoc('docs/common-stores') %}
+             <li><a title="{{ _('Stores') }}" href="{{ pathto('docs/common-stores') }}">{{ _('Stores') }}</a></li>
+           {%- endif %}
            
            {# Display project news and/or history #}
            {%- if hasdoc('docs/project-news') or hasdoc('docs/common-history-of-ardupilot') or hasdoc('docs/docs/common-acknowledgments') %}
@@ -154,9 +157,6 @@
              </li>
            {%- endif %}
 
-           {%- if hasdoc('docs/common-stores') %}
-             <li><a title="{{ _('Stores') }}" href="{{ pathto('docs/common-stores') }}">{{ _('Stores') }}</a></li>
-           {%- endif %}
            
         </ul>
 </div>
