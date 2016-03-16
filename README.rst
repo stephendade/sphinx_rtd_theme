@@ -9,14 +9,14 @@
 .. _demo: http://docs.readthedocs.org
 .. _hidden: http://sphinx-doc.org/markup/toctree.html
 
-**************************
-Read the Docs Sphinx Theme
-**************************
+*****************************************
+ARUDPILOT Read the Docs-ish Sphinx Theme
+*****************************************
 
 This is a modification of the [snide/sphinx_rtd_theme](https://github.com/snide/sphinx_rtd_theme).
 It supports the addition of a top site bar above the main sphinx content. This site bar includes menu content
 that is populated based on the presence of certain files in the source tree at /docs/. For example, 
-if a file ``docs/project-news.rst`` is present in the tree a "News" menu will be displayed.
+if a file ``docs/project-news.rst`` is present in the tree an "About" menu will be displayed.
 
 It also will display a table of contents in any article named /docs/common-table-of-contents.rst
 

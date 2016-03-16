@@ -139,7 +139,7 @@
            {%- endif %}
            
            {# Display project news and/or history #}
-           {%- if hasdoc('docs/project-news') or hasdoc('docs/common-history-of-ardupilot') or hasdoc('docs/docs/common-acknowledgments') %}
+           {%- if hasdoc('docs/project-news') or hasdoc('docs/common-history-of-ardupilot') or hasdoc('docs/docs/common-acknowledgments') or hasdoc('docs/docs/common-wiki_editing_guide') %}
                         <li><a title="{{ _('About') }}" href="{{ pathto('index') }}">{{ _('About') }}</a>
                <ul>
                  {%- if hasdoc('docs/project-news') %}
@@ -152,6 +152,9 @@
                    
                  {%- if hasdoc('docs/common-history-of-ardupilot') %}
                    <li><a title="{{ _('History of ArduPilot') }}" href="{{ pathto('docs/common-history-of-ardupilot') }}">{{ _('History') }}</a></li>
+                 {%- endif %}
+                 {%- if hasdoc('docs/common-wiki_editing_guide') %}
+                   <li><a title="{{ _('Wiki Editing Guide') }}" href="{{ pathto('docs/common-wiki_editing_guide') }}">{{ _('Wiki Editing Guide') }}</a></li>
                  {%- endif %}
                </ul>
              </li>
