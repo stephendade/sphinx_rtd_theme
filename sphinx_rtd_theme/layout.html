@@ -117,6 +117,9 @@
                  {%- if hasdoc('docs/common-downloads_developer_tools') %}
                    <li><a title="{{ _('Developer Tools') }}" href="{{ pathto('docs/common-downloads_developer_tools') }}">{{ _('Developer Tools') }}</a></li>
                  {%- endif %}
+                 {%- if hasdoc('docs/common-downloads_firmware') %}
+                   <li><a title="{{ _('Firmware') }}" href="{{ pathto('docs/common-downloads_firmware') }}">{{ _('Firmware') }}</a></li>
+                 {%- endif %}
                  <li><a href='http://firmware.ardupilot.org/downloads/wiki/pdf_guides/'>Tutorial PDFs</a></li>
               </ul>
            </li>
