@@ -109,11 +109,15 @@
            
            <li><a href='http://firmware.diydrones.com/'>Downloads</a>
               <ul>
-                <li><a href='http://firmware.diydrones.com/Tools/MissionPlanner/'>Mission Planner</a></li>
-                <li><a href='http://firmware.diydrones.com/Tools/APMPlanner/'>APM Planner 2</a></li>
-                <li><a href='#'>User Tools TBD</a></li> 
-                 <li><a href='#'>Dev Tools TBD</a></li>
-                 <li><a href='#'>Tutorial PDFs TBD</a></li>
+                <li><a href='http://firmware.ardupilot.org/Tools/MissionPlanner/'>Mission Planner</a></li>
+                <li><a href='http://firmware.ardupilot.org/Tools/APMPlanner/'>APM Planner 2</a></li>
+                 {%- if hasdoc('docs/common-downloads_advanced_user_tools') %}
+                   <li><a title="{{ _('Advanced User Tools') }}" href="{{ pathto('docs/common-downloads_advanced_user_tools') }}">{{ _('Advanced User Tools') }}</a></li>
+                 {%- endif %}
+                 {%- if hasdoc('docs/common-downloads_developer_tools') %}
+                   <li><a title="{{ _('Developer Tools') }}" href="{{ pathto('docs/common-downloads_developer_tools') }}">{{ _('Developer Tools') }}</a></li>
+                 {%- endif %}
+                 <li><a href='http://firmware.ardupilot.org/downloads/wiki/pdf_guides/'>Tutorial PDFs</a></li>
               </ul>
            </li>
            
