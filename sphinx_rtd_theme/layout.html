@@ -90,86 +90,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
-    {# Static site menu. #}
-    <div id='cssmenu'>
-        <ul>
-           <li><a href='{{target}}ardupilot/index.html'>Home</a>
-              <ul>
-                 <li><a href='{{target}}copter/index.html'>Copter</a></li>
-                 <li><a href='{{target}}plane/index.html'>Plane</a></li>
-                 <li><a href='{{target}}rover/index.html'>Rover</a></li>
-                 <li><a href='{{target}}planner/index.html'>Mission Planner</a></li>
-                 <li><a href='{{target}}planner2/index.html'>APM Planner 2</a></li>
-                 <li><a href='{{target}}antennatracker/index.html'>AntennaTracker</a></li>
-                 <li><a href='{{target}}dev/index.html'>Dev</a></li>
-              </ul>
-           </li>
-           
-          
-           
-           <li><a href='http://firmware.diydrones.com/'>Downloads</a>
-              <ul>
-                <li><a href='http://firmware.ardupilot.org/Tools/MissionPlanner/'>Mission Planner</a></li>
-                <li><a href='http://firmware.ardupilot.org/Tools/APMPlanner/'>APM Planner 2</a></li>
-                 {%- if hasdoc('docs/common-downloads_advanced_user_tools') %}
-                   <li><a title="{{ _('Advanced User Tools') }}" href="{{ pathto('docs/common-downloads_advanced_user_tools') }}">{{ _('Advanced User Tools') }}</a></li>
-                 {%- endif %}
-                 {%- if hasdoc('docs/common-downloads_developer_tools') %}
-                   <li><a title="{{ _('Developer Tools') }}" href="{{ pathto('docs/common-downloads_developer_tools') }}">{{ _('Developer Tools') }}</a></li>
-                 {%- endif %}
-                 {%- if hasdoc('docs/common-downloads_firmware') %}
-                   <li><a title="{{ _('Firmware') }}" href="{{ pathto('docs/common-downloads_firmware') }}">{{ _('Firmware') }}</a></li>
-                 {%- endif %}
-                 <li><a href='http://firmware.ardupilot.org/downloads/wiki/pdf_guides/'>Tutorial PDFs</a></li>
-              </ul>
-           </li>
-           
-           <li><a href='http://diydrones.com' />Community</a>
-              <ul>
-                 <li><a href='http://diydrones.com/'>DIY Drones</a></li>
-                 <li><a href='http://ardupilot.com/forum/'>APM Forums</a></li>
-                 <li><a href='{{target}}/dev/build/html/index.html'>Developer</a></li>
-                 {%- if hasdoc('docs/common-commercial-support') %}
-                   <li><a title="{{ _('Commercial Support') }}" href="{{ pathto('docs/common-commercial-support') }}">{{ _('Commercial Support') }}</a></li>
-                 {%- endif %}
-                 {%- if hasdoc('docs/common-team') %}
-                   <li><a title="{{ _('Dev Team') }}" href="{{ pathto('docs/common-team') }}">{{ _('Development Team') }}</a></li>
-                 {%- endif %}
-                 {%- if hasdoc('docs/common-training-centers') %}
-                   <li><a title="{{ _('Training Centers') }}" href="{{ pathto('docs/common-training-centers') }}">{{ _('UAS Training Centers') }}</a></li>
-                 {%- endif %}
-              </ul>
-           </li>
-
-           {%- if hasdoc('docs/common-stores') %}
-             <li><a title="{{ _('Stores') }}" href="{{ pathto('docs/common-stores') }}">{{ _('Stores') }}</a></li>
-           {%- endif %}
-           
-           {# Display project news and/or history #}
-           {%- if hasdoc('docs/project-news') or hasdoc('docs/common-history-of-ardupilot') or hasdoc('docs/docs/common-acknowledgments') or hasdoc('docs/docs/common-wiki_editing_guide') %}
-                        <li><a title="{{ _('About') }}" href="{{ pathto('index') }}">{{ _('About') }}</a>
-               <ul>
-                 {%- if hasdoc('docs/project-news') %}
-                   <li><a title="{{ _('Project News') }}" href="{{ pathto('docs/project-news') }}">{{ _('News') }}</a></li>
-                 {%- endif %}
-                 
-                 {%- if hasdoc('docs/common-acknowledgments') %}
-                   <li><a title="{{ _('Acknowledgments') }}" href="{{ pathto('docs/common-acknowledgments') }}">{{ _('Acknowledgments') }}</a></li>
-                 {%- endif %}
-                   
-                 {%- if hasdoc('docs/common-history-of-ardupilot') %}
-                   <li><a title="{{ _('History of ArduPilot') }}" href="{{ pathto('docs/common-history-of-ardupilot') }}">{{ _('History') }}</a></li>
-                 {%- endif %}
-                 {%- if hasdoc('docs/common-wiki_editing_guide') %}
-                   <li><a title="{{ _('Wiki Editing Guide') }}" href="{{ pathto('docs/common-wiki_editing_guide') }}">{{ _('Wiki Editing Guide') }}</a></li>
-                 {%- endif %}
-               </ul>
-             </li>
-           {%- endif %}
-        </ul>
-        
-        
-</div>
+    {% include "z_top_menu.html" %}
 
   <div class="wy-grid-for-nav">
 
@@ -219,19 +140,8 @@
         {% endblock %}
         
         <!-- add paypal and dronecode logos -->
-        <div style="margin: auto; padding-left:20px; padding-right:20px; width=100%">
-        <hr />
-        <form style="margin:auto;" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-        <input type="hidden" name="cmd" value="_s-xclick" />
-        <input type="hidden" name="hosted_button_id" value="X5HA3WBXVS43S" />
-        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate" />
-        </form>
-        <hr />
-        </div>
-        <div style="padding:auto; width=100%; background-color:white; ">
-         <a style="margins:auto;" href="https://www.dronecode.org/"><img src="https://www.dronecode.org/sites/all/themes/dronecode/logo.png" width="130" alt="Dronecode" class=""></a>
-        </div>
-        <!-- end add paypal and dronecode logos -->
+        {% include "z_sidebar_additions.html" %}
+        <!-- endadd paypal and dronecode logos -->
         
       </div>
       &nbsp;
