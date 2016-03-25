@@ -5132,7 +5132,7 @@ span[id*='MathJax-Span'] {
   padding: 0 1px 0 0;
   float: left;
   display: block;
-  background: url(../../images/mainnav-sep-2.gif) repeat-y right;
+  background: url(../images/mainnav-sep-2.gif) repeat-y right;
   cursor: pointer;
 }
 
@@ -5274,7 +5274,7 @@ span[id*='MathJax-Span'] {
   }
 }
 @media only screen and (min-width: 768px) {
-  #cssmenu ul {
+  #cssmenu .menu-opened ul {
     display: block !important;
   }
 
