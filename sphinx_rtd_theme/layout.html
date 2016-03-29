@@ -123,8 +123,10 @@
           {% endif %}
         {% endif %}
 
-        {% include "searchbox.html" %}
-
+        {% if not shorttitle=='ardupilot' %}
+          {% include "searchbox.html" %}
+        {% endif %}
+        
         {% endblock %}
       </div>
 
