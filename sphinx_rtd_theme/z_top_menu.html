@@ -61,13 +61,12 @@
                  {%- if hasdoc('docs/project-news') %}
                    <li><a title="{{ _('Project News') }}" href="{{ pathto('docs/project-news') }}">{{ _('News') }}</a></li>
                  {%- endif %}
-                 
-                 {%- if hasdoc('docs/common-acknowledgments') %}
-                   <li><a title="{{ _('Acknowledgments') }}" href="{{ pathto('docs/common-acknowledgments') }}">{{ _('Acknowledgments') }}</a></li>
-                 {%- endif %}
-                   
                  {%- if hasdoc('docs/common-history-of-ardupilot') %}
                    <li><a title="{{ _('History of ArduPilot') }}" href="{{ pathto('docs/common-history-of-ardupilot') }}">{{ _('History') }}</a></li>
+                 {%- endif %}
+                   <li><a href='http://ardupilot.org/dev/docs/license-gplv3.html'>License</a></li>
+                 {%- if hasdoc('docs/common-acknowledgments') %}
+                   <li><a title="{{ _('Acknowledgments') }}" href="{{ pathto('docs/common-acknowledgments') }}">{{ _('Acknowledgments') }}</a></li>
                  {%- endif %}
                  {%- if hasdoc('docs/common-wiki_editing_guide') %}
                    <li><a title="{{ _('Wiki Editing Guide') }}" href="{{ pathto('docs/common-wiki_editing_guide') }}">{{ _('Wiki Editing Guide') }}</a></li>
