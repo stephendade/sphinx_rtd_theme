@@ -4932,6 +4932,9 @@ footer span.commit code, footer span.commit .rst-content tt, .rst-content footer
   text-align: left;
   padding-left: 0;
 }
+.rst-content .wy-table-responsive table td, .rst-content .wy-table-responsive th {
+  white-space: normal;
+}
 .rst-content tt, .rst-content tt, .rst-content code {
   color: #000;
 }

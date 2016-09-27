@@ -18,6 +18,7 @@ Contents:
 
     demo
     list
+    docs/table
 
 .. toctree::
     :titlesonly:
