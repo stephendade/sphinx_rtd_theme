@@ -10,7 +10,7 @@
 .. _hidden: http://sphinx-doc.org/markup/toctree.html
 
 *****************************************
-ARUDPILOT Read the Docs-ish Sphinx Theme
+ARDUPILOT Read the Docs-ish Sphinx Theme
 *****************************************
 
 This is a modification of the [snide/sphinx_rtd_theme](https://github.com/snide/sphinx_rtd_theme).
