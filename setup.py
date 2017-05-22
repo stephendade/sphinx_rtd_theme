@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """`sphinx_rtd_theme` lives on `Github`_.
 
-.. _github: https://www.github.com/hamishwillee/sphinx_rtd_theme
+.. _github: https://www.github.com/ArduPilot/sphinx_rtd_theme
 
 """
 from setuptools import setup
@@ -11,7 +11,7 @@ from sphinx_rtd_theme import __version__
 setup(
     name='sphinx_rtd_theme',
     version=__version__,
-    url='https://github.com/hamishwillee/sphinx_rtd_theme/',
+    url='https://github.com/ArduPilot/sphinx_rtd_theme/',
     license='MIT',
     author='Dave Snider',
     author_email='dave.snider@gmail.com',
